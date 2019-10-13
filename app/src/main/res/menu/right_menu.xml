@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_info"
+        android:icon="@drawable/ic_info"
+        android:title="pengaturan"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/nav_setting"
+        android:title="Pengaturan"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/nav_test"
+        android:title="Test"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item android:id="@+id/nav_submenu1"
+                android:title="Test 1"/>
+
+            <item android:id="@+id/nav_submenu2"
+                android:title="Test 2"/>
+
+        </menu>
+
+    </item>
+
+    <item android:id="@+id/nav_exit"
+        android:title="Keluar"
+        app:showAsAction="never"/>
+
+
+</menu>

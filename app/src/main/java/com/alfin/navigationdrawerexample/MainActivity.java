@@ -9,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -76,5 +78,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.right_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_info:
+                Toast.makeText(this, "Info", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nav_setting:
+                Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nav_exit:
+                Toast.makeText(this, "Exit", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nav_submenu1:
+                Toast.makeText(this, "Subitem 1", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nav_submenu2:
+                Toast.makeText(this, "Subitem 2", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
